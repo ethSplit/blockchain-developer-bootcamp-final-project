@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Simple Dapp</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        #sub_div {
+            position: absolute;
+            bottom: 20px;
+        }
+    </style> 
+</head>
+<body>
+    <nav>
+        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Airdrop</a>
+        <a href="staking.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Staking</a>
+    </nav>
+
+    <div id="mm-detected"></div>
+
+  <!-- Connect to MetaMask Wallet -->
+
+  <!-- <button id="mm-connect">Connect to MetaMask</button> -->
+
+  <!-- Display current address -->
+
+  <div id="mm-current-account"></div>
+
+
+    <div style="padding-left:20px">
+        <h1>Airdrop</h1>
+
+        <div id="mm-detected"></div>
+
+        <button id="mm-connect" type="button" class="btn btn-info">Connect to MetaMask</button>
+
+        <div id="mm-current-account"></div>
+
+        <br />
+        <button id="claim-airdrop" type="button" class="btn btn-outline-success">Claim Tokens</button>
+        <br />
+        <br />
+        <div id="mytoken-display-value">Your Token Balance: </div>
+    </div>
+    <div id="sub_div">
+        
+        <br />
+        
+    </div>
+</body>
+
+<script src="dapp.js"></script>
+
+</html>

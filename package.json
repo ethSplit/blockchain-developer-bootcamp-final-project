@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.0",
+    "@truffle/hdwallet-provider": "^1.7.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.4"
+  }
+}
