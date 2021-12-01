@@ -12,8 +12,9 @@ module.exports = async function(deployer, network) {
   let stakingInstance = await StakingContract.deployed();
   let tokenInstance = await MyToken.deployed();
   let airdropInstance = await Airdrop.deployed();
-  //uncomment for tests!
+  /**uncomment for tests!
   //if (network == "development") return;
+  */
   await airdropInstance.setTokenAddress(MyToken.address);
   await airdropInstance.setClaimableAmount(1);
   await stakingInstance.setStakingToken(MyToken.address);

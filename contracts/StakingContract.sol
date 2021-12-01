@@ -49,7 +49,9 @@ contract StakingContract is Ownable, ReentrancyGuard {
 
   //todo: add timelock to make withdraw unable for this time
   uint256 public defaultLockInDuration;
-
+  
+  /// @notice checks if the token address is set
+  /// @dev functions implementing this modifier can only run if token address is set
   modifier isTokenSet() {
         require(stakingToken != IERC20(address(0)), "No token address set");
         _;
@@ -74,9 +76,9 @@ contract StakingContract is Ownable, ReentrancyGuard {
   function stake(uint256 _amount) public isTokenSet() nonReentrant payable {
     require(stakingToken.balanceOf(msg.sender) >= _amount, "Not enough funds");
     require(stakingToken.allowance(msg.sender, address(this)) >= _amount, "Not approved");
+    require(stakingToken.transferFrom(msg.sender, address(this), _amount), "Token transfer failed");
     stakes[msg.sender] = stakes[msg.sender].add(_amount);
     // todo stakeholderCount++;
-    stakingToken.transferFrom(msg.sender, address(this), _amount);
     emit Staked(msg.sender, _amount);
   }
 
@@ -90,6 +92,9 @@ contract StakingContract is Ownable, ReentrancyGuard {
     emit Unstaked(msg.sender, _amount);
   }
 
+  /// @notice return the token address
+  /// @dev get the ERC20 address to interact with the specific token
+  /// @return return ERC20 address
   function getStakingToken () public view returns (IERC20) {
     return stakingToken;
   }

@@ -6,21 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Simple Dapp</title>
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
-        #sub_div {
-            position: absolute;
-            bottom: 20px;
+        #web3-container {
+            display:none;
         }
     </style> 
 </head>
 <body>
-    <nav>
+    <div id="mm-detected"></div>
+
+    <button id="mm-connect" type="button" class="btn btn-info">Connect to MetaMask</button>
+
+    <div id="mm-current-account"></div>
+    <br />
+    <br />
+    <div id="web3-container">
+        <nav>
         <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Airdrop</a>
-        <a href="staking.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Staking</a>
+        <a href="staking.html" id="switch-to-staking" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Staking</a>
     </nav>
 
     <div id="mm-detected"></div>
@@ -36,12 +45,11 @@
 
     <div style="padding-left:20px">
         <h1>Airdrop</h1>
+        <div id="airdrop-balance">Available Tokens: </div>
 
-        <div id="mm-detected"></div>
+        <br />
 
-        <button id="mm-connect" type="button" class="btn btn-info">Connect to MetaMask</button>
-
-        <div id="mm-current-account"></div>
+        
 
         <br />
         <button id="claim-airdrop" type="button" class="btn btn-outline-success">Claim Tokens</button>
@@ -49,13 +57,8 @@
         <br />
         <div id="mytoken-display-value">Your Token Balance: </div>
     </div>
-    <div id="sub_div">
-        
-        <br />
-        
     </div>
 </body>
 
 <script src="dapp.js"></script>
-
 </html>

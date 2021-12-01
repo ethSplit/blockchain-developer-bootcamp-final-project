@@ -14,21 +14,42 @@
 
     <!-- Das neueste kompilierte und minimierte JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        #web3-container {
+            display:none;
+        }
+    </style> 
     
 </head>
 <body>
+    <div id="mm-detected"></div>
+
+    <button id="mm-connect" type="button" class="btn btn-info">Connect to MetaMask</button>
+
+    <div id="mm-current-account"></div>
+    <br />
+    <br />
+    <div id="web3-container">
     <nav>
         <a href="index.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Airdrop</a>
         <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Staking</a>
     </nav>
     <div style="padding-left:20px">
         <h1>Staking</h1>
+        <div id="staking-balance">Tokens staked: </div>
         <br />
-        <INPUT id="txtNumber" placeholder="Amount" onkeypress="return isNumberKey(event)"   type="text" name="txtNumber">
+        <INPUT id="txtNumber" placeholder="Amount" type="number" name="txtNumber">
         <br />
         <br />
-            <button type="button" class="btn btn-outline-success">Approve</button>
-            <button type="button" class="btn btn-outline-success">Stake</button>
+            <button id="approve-button" type="button" class="btn btn-outline-success">Approve</button>
+            <button id="stake-button" type="button" class="btn btn-outline-success">Stake</button>
+            <br />
+            <br />
+            <button id="unstake-button" type="button" class="btn btn-outline-success">Unstake</button>
+            <br />
+            <p id="balance-after-unstake"></p>
+    </div>
     </div>
 </body>
 <script src="dapp.js"></script>

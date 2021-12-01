@@ -43,12 +43,16 @@ contract Airdrop is Ownable, ReentrancyGuard{
     /// @notice Amount of tokens to be claimed
     /// @dev uint that stores the claimable amount of tokens per user
     uint256 public claimableAmount;
-    
+
+    ///@notice checks if token address is set
+    /// @dev function that have this modifier set, can only be run if token address is set
     modifier isTokenSet() {
         require(token != IERC20(address(0)), "No token address set");
         _;
     }
-    
+
+    ///@notice checks if claimable amount is set
+    /// @dev claimable amount has to be higher than 0
     modifier claimableAmountSet () {
         require(claimableAmount > 0, "No calimable amount set");
         _;
@@ -84,6 +88,9 @@ contract Airdrop is Ownable, ReentrancyGuard{
         emit AirdropClaimed(msg.sender, claimableAmount);
     }
 
+    /// @notice Get the token address
+    /// @dev without token address claim is not possible
+    /// @return return erc20 token address
     function getTokenAddress () public view returns(IERC20) {
         return token;
     }
@@ -95,8 +102,18 @@ contract Airdrop is Ownable, ReentrancyGuard{
         return token.balanceOf(address(this));
     }
 
+    /// @notice get the available amount that can be claimed
+    /// @dev 
+    /// @return return uint claimable amount
     function getClaimableAmount () public view returns(uint) {
         return claimableAmount;
+    }
+
+    /// @notice used to check if a user claimed airdrop
+    /// @dev readig data from mapping claimed
+    /// @return bool false if airdrop has not been claimed yet
+    function airdropClaimed () public view returns(bool){
+        return claimed[msg.sender];
     }
 
      /***
