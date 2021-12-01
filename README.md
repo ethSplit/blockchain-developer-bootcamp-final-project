@@ -2,7 +2,7 @@
 
 ## Deployed version url:
 
-https://final-project-
+https://dapp.maffam.de/
 
 ## How to run this project locally:
 
@@ -32,14 +32,14 @@ https://final-project-
 ### How to populate locally deployed contract with listings
 
 - `truffle migrate --network development`
-- `cd app\src && npm run dec`
+- `cd app\src && npm run dev`
 - Open local ui from `http://localhost:8080`
 - Make sure your Metamask localhost network is in port `7545` and chain id is `1337`.
 - If you get `TXRejectedError` when sending a transaction, reset your Metamask account from Advanced settings.
 
 ## Screencast link
 
-https://youtu.be/
+https://youtu.be/NnixxQFj818
 
 ## Public Ethereum wallet for certification:
 
