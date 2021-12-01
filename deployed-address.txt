@@ -1,3 +1,5 @@
 //deployed Ropsten Address
 network: Ropsten
-address: 
+MyToken.address:            0xEdE88Fa2e9e021999401c76DC0f1E9b10F00b239
+Airdrop.address:            0x75c83D5E45526C8454E2a3250fD3b505C5289a52
+StakingContract.address:    0x6D25277005bb124e18142513fA8Fcd14a173f198
