@@ -88,7 +88,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -101,7 +102,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -121,7 +123,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -134,7 +137,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -173,7 +177,8 @@
       "name": "stake",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -199,7 +204,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -218,7 +224,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -231,7 +238,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -12492,12 +12500,13 @@
         }
       },
       "links": {},
-      "address": "0x8782efb1ec719cf302d00BDf3265d2D4268E7b69",
-      "transactionHash": "0xd17713e418876f493011df6ee83504b0b477659974725a35ba63c7352b1b0d75"
+      "address": "0x3Fe1828b9fa48d692a5c91B7506d50C3eBaBd5C8",
+      "transactionHash": "0xa86add984b53026fcaa7fe8295655506fd09cf7d5e723c11a78a9eb9c35bd5c8"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-01T00:21:12.035Z",
+  "updatedAt": "2021-12-01T01:41:31.659Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "ethSplit",
     "details": "stake token into contract and get added to mapping that checks stakes",

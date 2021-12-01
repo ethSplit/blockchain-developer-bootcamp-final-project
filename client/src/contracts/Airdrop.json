@@ -76,7 +76,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -89,7 +90,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -109,7 +111,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -168,7 +171,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -181,7 +185,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -194,7 +199,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -207,7 +213,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"AirdropClaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"claimableAmount\",\"type\":\"uint256\"}],\"name\":\"ClaimableAmountSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"setTokenAddress\",\"type\":\"address\"}],\"name\":\"TokenAddressSet\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"airdropClaimed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claimAirdrop\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claimableAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getClaimableAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenAddress\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"setClaimableAmount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"}],\"name\":\"setTokenAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"ethSplit\",\"details\":\"The owner sets the token address and the claimable amount, so users can claim tokens, while a mapping checks if a user already claimed tokens.\",\"events\":{\"AirdropClaimed(address,uint256)\":{\"params\":{\"amount\":\"that has been claimed\",\"caller\":\"user that claimed the airdrop\"}},\"ClaimableAmountSet(uint256)\":{\"params\":{\"claimableAmount\":\"amount to claim per user\"}},\"TokenAddressSet(address)\":{\"params\":{\"setTokenAddress\":\"ERC20 TokenAddress\"}}},\"kind\":\"dev\",\"methods\":{\"airdropClaimed()\":{\"details\":\"readig data from mapping claimed\",\"returns\":{\"_0\":\"bool false if airdrop has not been claimed yet\"}},\"claimAirdrop()\":{\"details\":\"check that a user can claim only once\"},\"getBalance()\":{\"details\":\"returns token balance\",\"returns\":{\"_0\":\"uint that stands for the token balance of this contract\"}},\"getClaimableAmount()\":{\"returns\":{\"_0\":\"return uint claimable amount\"}},\"getTokenAddress()\":{\"details\":\"without token address claim is not possible\",\"returns\":{\"_0\":\"return erc20 token address\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setClaimableAmount(uint256)\":{\"details\":\"pass normal decimal number\",\"params\":{\"_amount\":\"the amount of tokens that should be claimable\"}},\"setTokenAddress(address)\":{\"details\":\"adds the ERC20 Token address\",\"params\":{\"_tokenAddress\":\"for the Token that should be claimable\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"stateVariables\":{\"claimableAmount\":{\"details\":\"uint that stores the claimable amount of tokens per user\"},\"claimed\":{\"details\":\"sets the user that claims to true\"},\"token\":{\"details\":\"imported IERC20.sol from openzeppelin to store token address\"}},\"title\":\"Airdrop Contract\",\"version\":1},\"userdoc\":{\"events\":{\"AirdropClaimed(address,uint256)\":{\"notice\":\"Emitted when Airdrop is being claimed\"},\"ClaimableAmountSet(uint256)\":{\"notice\":\"Emitted when ClaimableAmount is being set\"},\"TokenAddressSet(address)\":{\"notice\":\"Emitted when TokenAddress is being set\"}},\"kind\":\"user\",\"methods\":{\"airdropClaimed()\":{\"notice\":\"used to check if a user claimed airdrop\"},\"claimAirdrop()\":{\"notice\":\"lets user claim the airdrop\"},\"claimableAmount()\":{\"notice\":\"Amount of tokens to be claimed\"},\"getBalance()\":{\"notice\":\"returns the balance of this contract\"},\"getClaimableAmount()\":{\"notice\":\"get the available amount that can be claimed\"},\"getTokenAddress()\":{\"notice\":\"Get the token address\"},\"setClaimableAmount(uint256)\":{\"notice\":\"sets the amount of tokens that can be claimed per user\"},\"setTokenAddress(address)\":{\"notice\":\"sets the tokenaddress the contract will use\"},\"token()\":{\"notice\":\"used to store the token address\"}},\"notice\":\"Users can use this contract to claim tokens for free once per address\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Airdrop.sol\":\"Airdrop\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa1b27b3f44ff825974e5268e8f63ad3b03add5b464880d860fbb8cae043e17f7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ad0fb4425453220f15bdb8c4e009052839804bb725797b6d8c02ee2271bc3c23\",\"dweb:/ipfs/QmPtjdMxzEifPUEUa6cKX1yfTWjaZV6QtdwMdN6bEL9FBM\"]},\"@openzeppelin/contracts/security/ReentrancyGuard.sol\":{\"keccak256\":\"0x86ebc6cea2b539c2d4a79a4754f7c90c43c45c9aaf0aab32ecffb1565afc5e0b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1d8016f7e49bd65a14769d2c846a7e589603e51c4bf82da94315cc59f54fe2e4\",\"dweb:/ipfs/Qmd92BAbMLEbYYfRWwN1yqDTxEuguenmQ35YFbPh3KEFuP\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xc1452b054778f1926419196ef12ae200758a4ee728df69ae1cd13e5c16ca7df7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb252ec7657ba7a91be688cbd263090aa5379e504f488a62d06198e0d630322\",\"dweb:/ipfs/QmW56fDiDirhWfWiKrycXE5UY6tTNtFrYx39ipnSs8mkYb\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x7736c187e6f1358c1ea9350a2a21aa8528dec1c2f43b374a9067465a3a51f5d3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4fd625dca17657403af518cc6c8ab5c54c58898cf6e912ca2e1b0f3194ad0405\",\"dweb:/ipfs/QmQVv7YeeKmaS11bg7YDTeeGDk6i7sV8LMMfohaLM4SiRu\"]},\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0x29c462775f5b4c76dce400f120f3530aa3f81da42c839f975dc2b64784d22434\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://063db5d664d3d5bae10d0056c9d00339265229532d06b53d5f2e91778b2e428d\",\"dweb:/ipfs/QmWM92rU59t6BcZSj4w6ikoPL32R9hyTMb9Msg5X8vvu1s\"]},\"project:/contracts/Airdrop.sol\":{\"keccak256\":\"0x36c74285e8c0df3186f0a0d8ff38d4a24eed5f60970e7e08a6d39e2ec8ce8a4a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2eb631c0873849a1799dd6270316489370a58d9722206e058353ae3ec8ab911e\",\"dweb:/ipfs/QmSxgxf7WNuMKLM8AxVKXY3fnjQreUL6t7pSL6aubg9QPi\"]}},\"version\":1}",
@@ -10766,12 +10773,13 @@
         }
       },
       "links": {},
-      "address": "0x3E39e3a55Ea9f082390212940873fA448A512d3B",
-      "transactionHash": "0xbbc41f231ff981a8d15917755b1e729d22bb4c94725143e1f55c3f553f2ccb3e"
+      "address": "0xf237D8B895cDd648a768933511D4c1E7B912bba5",
+      "transactionHash": "0x8317f1e6856a8a09fac823c4098ec9dce85b060b49c4c3ebcbc049c4189e9af6"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-01T00:21:12.002Z",
+  "updatedAt": "2021-12-01T01:41:31.648Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "ethSplit",
     "details": "The owner sets the token address and the claimable amount, so users can claim tokens, while a mapping checks if a user already claimed tokens.",

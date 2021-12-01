@@ -122,7 +122,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -165,7 +166,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -178,7 +180,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -239,7 +242,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -252,7 +256,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -272,7 +277,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -285,7 +291,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -12900,12 +12907,13 @@
         }
       },
       "links": {},
-      "address": "0x4Ea3c6a0A6FC4ccaf4559B389DD4009CEfEf1E03",
-      "transactionHash": "0x49031aa7faa25e71fcd39da4e1ecf4e1046bbc6e27724500782c45de189f63fe"
+      "address": "0x71f5ED6fD89Dc8B36CB09D9406Bd7A957C99A895",
+      "transactionHash": "0x8c967fd3b1c87277a6d3300a18890f1f3c9e24ad4dc7c71f4d50ab87db29f9e6"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-01T00:21:12.017Z",
+  "updatedAt": "2021-12-01T01:41:31.639Z",
+  "networkType": "ethereum",
   "devdoc": {
     "details": "the contract creator gets inital Tokens minted",
     "events": {
